@@ -1,0 +1,140 @@
+.Services {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.Services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+}
+
+.services-title {
+    position: relative;
+}
+
+.services-title h1 {
+    padding: 0px 30px;
+    font-size: 80px;
+    font-weight: 600;
+    background: linear-gradient(35deg, #89D4CF 10%, #734AE8 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Services-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.services-format {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 60px;
+    border-radius: 10px;
+    border: 2px solid white;
+    transition: 0.4s;
+    cursor: pointer;
+    position: relative;
+    background: #222;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.services-format:hover {
+    border: 2px solid #ff00ff;
+    background-image: linear-gradient(35deg, #89D4CF 10%, #734AE8 100%);
+    transform: scale(1.05);
+    transition: 0.4s;
+    box-shadow: 0px 5px 15px rgba(137, 212, 207, 0.5);
+}
+
+.services-format h3 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.services-format h2 {
+    font-size: 38px;
+    font-weight: 800;
+    background: linear-gradient(35deg, #28726d 10%, #4716db 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.service-name:hover {
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+.services-format p {
+    color: #d4d4d4;
+    font-size: 24px;
+    line-height: 40px;
+    max-width: 300px;
+    transition: all 0.3s ease-in-out;
+}
+
+.services-readmore {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.services-readmore:hover {
+    color: #ff00ff;
+    transform: scale(1.1);
+}
+
+@media(max-width:768px) {
+    .Services {
+        align-items: start;
+        gap: 70px;
+        margin: 20px 70px;
+    }
+
+    .services-title h1 {
+        padding: 0;
+        font-size: 50px;
+    }
+
+    .services-format {
+        gap: 20px;
+        padding: 32px;
+    }
+
+    .services-format h2 {
+        font-size: 28px;
+    }
+
+    .services-format p {
+        font-size: 18px;
+        line-height: 32px;
+        max-width: 300px;
+    }
+
+    .Services-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}

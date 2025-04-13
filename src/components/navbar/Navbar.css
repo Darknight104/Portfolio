@@ -1,0 +1,168 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 170px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Logo Animation */
+.img {
+  height: 80px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.img:hover {
+  transform: scale(1.1);
+}
+
+/* Navbar Menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 60px;
+  font-size: 20px;
+  transition: right 0.5s ease-in-out;
+}
+
+/* Active Mobile Menu */
+.nav-menu.open {
+  right: 0; 
+}
+
+/* Menu Item Styling */
+.nav-menu li {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-menu li:hover {
+  transform: scale(1.05);
+}
+
+/* Animated Underline */
+.nav-menu li p {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-menu li p::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(35deg, #89D4CF, #734AE8);
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-menu li:hover p::after {
+  width: 100%;
+}
+
+/* Connect With Me Button */
+.nav-connect {
+  padding: 20px 40px;
+  border-radius: 50px;
+  background: linear-gradient(35deg, #89D4CF 10%, #734AE8 100%);
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.nav-connect:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Mobile Menu Icon */
+.nav-mob-open {
+  display: none;
+  position: fixed;
+  right: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-mob-open:hover {
+  transform: scale(1.2);
+}
+
+/* Mobile Close Button */
+.nav-mob-close {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-mob-close:hover {
+  transform: rotate(180deg);
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+  .navbar {
+      margin: 20px 50px;
+  }
+
+  .nav-connect {
+      display: none;
+  }
+
+  .nav-mob-open {
+      display: block;
+      position: fixed;
+      right: 30px;
+  }
+
+  .nav-menu {
+      position: fixed;
+      flex-direction: column;
+      align-items: start;
+      top: 0;
+      gap: 30px;
+      background-color: #1f0016;
+      width: 350px;
+      height: 100%;
+      z-index: 2;
+      right: -350px;
+      transition: right 0.5s ease-in-out;
+      padding-top: 50px;
+  }
+
+  .nav-menu.open {
+      right: 0;
+  }
+
+  .nav-menu li {
+      font-size: 30px;
+      padding-left: 100px;
+      flex-direction: row;
+      gap: 20px;
+  }
+
+  .nav-mob-close {
+      display: block;
+      top: 20px;
+      right: 20px;
+      z-index: 10;
+  }
+}
+
+/* Smooth Fade-In Animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
