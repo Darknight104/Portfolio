@@ -1,11 +1,11 @@
 import React from 'react'
-import Navbar from './components/navbar/Navbar'
-import Hero from './components/hero/hero'
-import About from './components/About/About'
-import Services from '../components/Services/Services'
-import Mywork from '../components/Mywork/Mywork'
-import Contact from '../components/contact/Contact.jsx'
-import Footer from './components/footer/Footer'
+import Navbar from './components/navbar/Navbar.jsx'
+import Hero from './components/hero/hero.jsx'
+import About from './components/About/About.jsx'
+import Services from './components/Services/Services.jsx'
+import Mywork from './components/Mywork/Mywork.jsx'
+import Contact from './components/contact/Contact.jsx'
+import Footer from './components/footer/Footer.jsx'
 
 const App = () => {
   return (
