@@ -1,45 +1,58 @@
-import React, { useState } from "react";
-import "./Mywork.css";
-import myproj from "../../assets/myproject";
+import React, { useState } from 'react';
+import './Mywork.css'; // You can use similar CSS as Services.css
+import myproject from '../../assets/myproject';
+import { Link } from "react-scroll";
 
-const Mywork = () => {
-  const [visibleProjects, setVisibleProjects] = useState(3); // Initially show 3 projects
+const Projects = () => {
+    const [expandedIndex, setExpandedIndex] = useState(null);
 
-  const showMoreProjects = () => {
-    setVisibleProjects((prev) => prev + 3); // Load 3 more projects each time
-  };
+    // eslint-disable-next-line no-unused-vars
+    const toggleReadMore = (index) => {
+        setExpandedIndex(expandedIndex === index ? null : index);
+    };
 
-  const showLessProjects = () => {
-    setVisibleProjects(3); // Reset to show only 3 projects
-  };
+    const handleImageClick = (githubLink) => {
+        window.open(githubLink, '_blank');
+    };
 
-  return (
-    <div id="work" className="mywork">
-      <div className="mywork-title">
-        <h1>My Latest Projects</h1>
-      </div>
+    return (
+        <div id='work' className='Projects'>
+            <div className="projects-title">
+                <h1>My Projects</h1>
+            </div>
+            <div className='Projects-container'>
+                {myproject.map((project, index) => (
+                    <div key={index} className="projects-format">
+                        <h3>{project.w_no}</h3>
+                        <div 
+                            className="project-image-container"
+                            onClick={() => handleImageClick(project.w_github)}
+                        >
+                            <img 
+                                src={project.w_image} 
+                                alt={project.w_name}
+                                className="project-image"
+                            />
+                            <div className="github-overlay">
+                                <span>View on GitHub</span>
+                            </div>
+                        </div>
+                        <h2 className="project-name">
+                            {project.w_name}
+                        </h2>
+                        <div className="project-actions">
+                            <button 
+                                onClick={() => handleImageClick(project.w_github)}
+                                className="github-button"
+                            >
+                                View Repository
+                            </button>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+}
 
-      <div className="mywork-container">
-        {myproj.slice(0, visibleProjects).map((work, index) => (
-          <img key={index} src={work.w_image} alt={`Project ${index + 1}`} />
-        ))}
-      </div>
-
-      <div className="mywork-buttons">
-        {visibleProjects < myproj.length && (
-          <button className="mywork-showmore" onClick={showMoreProjects}>
-            Show More
-          </button>
-        )}
-
-        {visibleProjects > 3 && (
-          <button className="mywork-showless" onClick={showLessProjects}>
-            Show Less
-          </button>
-        )}
-      </div>
-    </div>
-  );
-};
-
-export default Mywork;
+export default Projects;

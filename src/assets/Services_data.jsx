@@ -16,21 +16,7 @@ const Services_Data =[
     s_no:"03",
     s_name:"Demistifying integration of Ai into AR/VR",
     s_desc:"Integrating AI into AR/VR enhances immersive experiences by enabling real-time object detection, natural language interactions, adaptive environments, and intelligent user interactions.",
-    s_link:"https://drive.google.com/file/d/1SqTEVSCRwxvquK9CHmUAJfw7eC_KEfq5/view?usp=sharing",
-
-},
-{
-    s_no:"04",
-    s_name:"UI/UX Designer at TechnoHacks",
-    s_desc:"Worked as a UI/UX Designer at TechnoHacks, focusing on creating user-friendly interfaces and enhancing user experiences for web and mobile applications.",
-    s_link:"https://drive.google.com/file/d/1SqTEVSCRwxvquK9CHmUAJfw7eC_KEfq5/view?usp=sharing",
-
-},
-{
-    s_no:"05",
-    s_name:"Bsics of C# in soloLearn",
-    s_desc:"Completed Basics of C# course on SoloLearn, gaining knowledge in C# syntax, object-oriented programming, and application development.",
-    s_link:"https://drive.google.com/file/d/1SqTEVSCRwxvquK9CHmUAJfw7eC_KEfq5/view?usp=sharing",
+    s_link:"https://drive.google.com/file/d/1p82F-u9N_-CyY-X9R2zlVTjVrupskshA/view?usp=sharing",
 
 },
 

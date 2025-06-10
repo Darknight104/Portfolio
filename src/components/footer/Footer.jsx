@@ -18,19 +18,13 @@ const Footer = () => {
           <a href="https://www.linkedin.com/in/hari-harasudhan-m-3b3929266/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin />
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-            <FaTwitter />
-          </a>
         </div>
       </div>
 
       <hr />
 
       <div className="footer-bottom">
-        <p className="footer-bottom-left">© 2025 Harihara Sudhan. All rights reserved.</p>
-        <div className="footer-bottom-right">
-          <a href="#">Terms of Service</a>
-          <a href="#">Privacy Policy</a>
+        <div className="footer-bottom-right"> 
         </div>
       </div>
     </footer>
@@ -38,3 +32,6 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+

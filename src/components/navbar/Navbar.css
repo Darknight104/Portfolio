@@ -5,21 +5,25 @@
   justify-content: space-between;
   margin: 20px 170px;
   animation: fadeIn 0.8s ease-in-out;
+  position: relative;
 }
 
-/* Logo Animation */
+/* Logo on the left */
+.nav-left {
+  flex: 1;
+}
+
 .img {
   height: 80px;
   border-radius: 50%;
   transition: transform 0.3s ease-in-out;
 }
 
-.img:hover {
-  transform: scale(1.1);
-}
-
-/* Navbar Menu */
+/* Menu centered */
 .nav-menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   list-style: none;
