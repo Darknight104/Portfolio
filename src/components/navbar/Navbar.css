@@ -29,12 +29,8 @@
   list-style: none;
   gap: 60px;
   font-size: 20px;
-  transition: right 0.5s ease-in-out;
-}
-
-/* Active Mobile Menu */
-.nav-menu.open {
-  right: 0; 
+  margin: 0;
+  padding: 0;
 }
 
 /* Menu Item Styling */
@@ -55,6 +51,7 @@
 .nav-menu li p {
   position: relative;
   overflow: hidden;
+  margin: 0;
 }
 
 .nav-menu li p::after {
@@ -89,10 +86,10 @@
 /* Mobile Menu Icon */
 .nav-mob-open {
   display: none;
-  position: fixed;
-  right: 30px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
+  width: 30px;
+  height: 30px;
 }
 
 .nav-mob-open:hover {
@@ -115,6 +112,11 @@
   transform: rotate(180deg);
 }
 
+/* Hide overflow to prevent purple color showing */
+body {
+  overflow-x: hidden;
+}
+
 /* Mobile Menu */
 @media (max-width: 768px) {
   .navbar {
@@ -127,41 +129,60 @@
 
   .nav-mob-open {
       display: block;
-      position: fixed;
-      right: 30px;
   }
 
   .nav-menu {
+      /* Reset desktop positioning */
       position: fixed;
-      flex-direction: column;
-      align-items: start;
+      left: auto;
+      transform: none;
+      
+      /* Mobile positioning - moved further off screen */
       top: 0;
+      right: -100%;
+      
+      /* Mobile layout */
+      flex-direction: column;
+      align-items: flex-start;
       gap: 30px;
       background-color: #1f0016;
       width: 350px;
-      height: 100%;
-      z-index: 2;
-      right: -350px;
+      height: 100vh;
+      z-index: 1000;
+      padding-top: 80px;
+      padding-left: 50px;
+      
+      /* Smooth transition */
       transition: right 0.5s ease-in-out;
-      padding-top: 50px;
+      
+      /* Ensure it's completely hidden */
+      visibility: hidden;
   }
 
   .nav-menu.open {
       right: 0;
+      visibility: visible;
   }
 
   .nav-menu li {
-      font-size: 30px;
-      padding-left: 100px;
+      font-size: 24px;
       flex-direction: row;
       gap: 20px;
+      width: 100%;
+      padding: 10px 0;
+  }
+
+  .nav-menu li p {
+      color: white;
   }
 
   .nav-mob-close {
       display: block;
-      top: 20px;
-      right: 20px;
-      z-index: 10;
+  }
+  
+  /* Ensure no horizontal overflow */
+  .navbar {
+      overflow-x: hidden;
   }
 }
 
