@@ -16,8 +16,12 @@ const About = () => {
             </div>
             <div className="about-right">
                 <div className="about-para">
-                    <p>I am a passionate AR/VR developer with a strong focus on creating immersive experiences and interactive technologies. With expertise in Unity, React.js, and WebXR, I design and develop engaging virtual environments and augmented reality applications. My projects range from VR campus navigation to AR business cards, blending creativity with technical precision to deliver innovative solutions.</p>
-                    <p>I am always eager to explore the latest advancements in extended reality (XR) and push the boundaries of digital interaction. My goal is to craft experiences that bridge the gap between the real and virtual worlds, making technology more interactive and accessible. Let’s build the future of immersive technology together!</p>
+                    <p>I am a full-stack developer with practical experience in both front-end 
+(React) and back-end technologies, and I am currently pursuing my 
+degree in computer science.I possess strong skills in Unity for 
+developing AR and VR apps. I am passionate about contributing to 
+innovative projects, collaborating with teams, and continuously learning 
+new technologies. </p>
                 </div>
                 <div className="about-skills">
                     <div className="about-skill"> <p>HTML & CSS</p>
@@ -32,7 +36,7 @@ const About = () => {
 
         <div className="about-achievements">
             <div className="about-achievement">
-                <h1>2+</h1>
+                <h1>1+</h1>
                 <p>Years of Experience</p>
             </div>
             <hr />
@@ -42,8 +46,8 @@ const About = () => {
             </div>
             <hr />
             <div className="about-achievement">
-                <h1>15+</h1>
-                <p>Events Participated</p>
+                <h1>2</h1>
+                <p>Internships</p>
             </div>
         </div>
     </div>

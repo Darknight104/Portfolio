@@ -67,7 +67,7 @@ const Hero = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        <span>Hi, I am Harihara Sudhan,</span> AR/VR Developer
+        <span>Hi, I am Harihara Sudhan,Frontend developer</span> 
       </motion.h1>
 
       <motion.p
